@@ -1,38 +1,46 @@
-
-function registrarPontos(arremesso) {
-    if (arremesso === 2) {
-        return ; // Arremesso de 2 pontos
-    } else if (arremesso === 3) {
-        return 3 // Arremesso de 3 pontos
-    } else {
-        return 0 // Erro, não fez cesta
+alert("Bem vindo ao jogo de basquete")
+alert('como vai fucionar?')
+alert(`meu projeto pessoal vai ser um x1 de basquete que so um jogar atacar e um defende\n voce vai ter as opçoes se quer fazer a bandeja ou se quer aremessar\n
+     voce vai ter algumas tentativas de arremeso ou bandeja \n e no final vai mostrar as estatisticas` )
+     alert("vamos começar")
+let hub = ''
+let ply1 = prompt("qual nome do seu jogador que vai atacar?")
+let ply2 = prompt("qual nome do seu jogador que vai defender?")
+function randomNum(n) {
+    return Math.floor(Math.random() * (n + 1))
+}
+let pontos = 0
+let tenativas = 0
+let limitePontos = 15
+let toco = 0
+let airBall = 0
+for(let i = 0; pontos <= limitePontos; i++) {
+    let resultado = randomNum(5)
+    tenativas = i
+    hub = prompt("1: voce quer fazer bandeja\n2: voce quer arremesar ")
+    if (hub == 1) {
+        if(resultado < 4) {
+            alert(`${ply1} fez bandeja e fez o ponto`)
+            pontos += 2
+        } else if (resultado > 3) {
+            alert(`${ply2} deu o toco`)
+            toco += 1
+        }
+    } else if (hub == 2) {
+        if (resultado < 4) {
+            alert(`${ply1} fez um arremeso e fez o ponto`)
+            pontos += 3
+        } else if (resultado > 3) {
+            alert(`${ply1} arremessou e deu AIR BALL`)
+            airBall += 1
+        }
     }
 }
+alert(`Você teve ${tenativas} tentativas fez ${pontos} pontos e teve ${pontos/tenativas} pontos por tentativa e levou ${toco} tocos de ${ply2} e deu ${airBall} air ball`)
 
-// Array para armazenar os pontos dos arremessos
-let pontos = []
-let totalPontos = 0
-let tentativas = 0
-let maxTentativas = 5 // Limitar tentativas
-let defensor = prompt('quem e seu defensor?')
-while (tentativas < maxTentativas) {
-    // Simulando um arremesso (2 ou 3 pontos)
-    let arremesso = prompt("voce quer arremesar de 2 ou de 3?\naperte 0 para sair :")
-    arremesso = parseInt(arremesso)
+//mostrar que levou o toco e de quem 
+//ajeitar as mensagem dos alert
 
-    if (arremesso === 0) {
-        break;
-    }
-
-    // Registrar os pontos do arremesso
-    pontos.push(registrarPontos(arremesso))
-    totalPontos += pontos[pontos.length - 1]
-    tentativas++
-}
-
-alert(`voce arremessou ${tentativas} vezes e ganhou do ${defensor} de ${totalPontos} pontos`)
-
-// você vai criar uma função usando o math.random() para definir se errou ou acertou a cesta
 
 
 
