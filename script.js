@@ -54,8 +54,12 @@ for (let i = 0; tentativas < limiteTentativas && pontos <= limitePontos; i++) {
     }
 }
 
-alert(`Você teve ${tentativas} tentativas, fez ${pontos} pontos, e teve uma média de ${pontos / tentativas} pontos por tentativa.
-Você levou ${toco} tocos de ${ply2} e deu ${airBall} air balls.`)
+alert(`Você teve ${tentativas} tentativas.
+Fez ${pontos} pontos, com uma média de ${pontos / tentativas} pontos por tentativa.
+
+Você levou ${toco} tocos de ${ply2} e deu ${airBall} air balls.
+`)
+
 
 alert("Obrigado por jogar!")  
 
