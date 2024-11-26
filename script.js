@@ -39,7 +39,7 @@ for (let i = 0; tentativas < limiteTentativas && pontos <= limitePontos; i++) {
 
     if (hub == 1) {
         if (resultado < 4) {
-            alert(`${ply1} fez bandeja e marcou o ponto!`)
+            alert(`${ply1} foi pra bandeja e marcou o ponto na cabeça de ${ply2}!`)
             pontos += 2
         } else {
             alert(`${ply2} deu o toco em ${ply1}!`)
@@ -47,7 +47,7 @@ for (let i = 0; tentativas < limiteTentativas && pontos <= limitePontos; i++) {
         }
     } else if (hub == 2) {
         if (resultado < 4) {
-            alert(`${ply1} fez um arremesso e marcou o ponto!`)
+            alert(`${ply1} arremesou e fez o ponto!`)
             pontos += 3
         } else {
             alert(`${ply1} arremessou e deu AIR BALL!`)
