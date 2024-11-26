@@ -1,8 +1,6 @@
 alert("Bem-vindo ao meu projeto pessoal")
 alert("Como vai funcionar?")
-alert(`Projeto Pessoal: X1 de Basquete
-
-O jogo consiste em um duelo de 1 contra 1, onde um jogador ataca e o outro defende. Durante o ataque, o jogador tem a opção de fazer uma bandeja ou realizar um arremesso.
+alert(`O jogo consiste em um duelo de 1 contra 1, onde um jogador ataca e o outro defende. Durante o ataque, o jogador tem a opção de fazer uma bandeja ou realizar um arremesso.
 
 Regras:
 
